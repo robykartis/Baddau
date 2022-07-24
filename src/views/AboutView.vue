@@ -1,5 +1,31 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <v-row>
+
+    <template>
+      <v-col cols="12" md="12">
+        <v-card>
+
+          <v-sheet height="150"></v-sheet>
+        </v-card>
+      </v-col>
+    </template>
+  </v-row>
 </template>
+
+<script>
+
+
+export default {
+  name: 'AboutView',
+
+  components: {
+
+  },
+  data() {
+    return {
+
+
+    }
+  },
+}
+</script>
