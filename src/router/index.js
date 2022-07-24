@@ -13,6 +13,10 @@ import AboutView from '../views/AboutView.vue'
 import LoginView from '../views/LoginView.vue'
 import RegisterView from '../views/RegisterView.vue'
 
+// import AdminLayouts
+import AdminLayouts from '@/components/layouts/admin/AdminLayouts.vue'
+import DashboardView from '../views/admin/DashboardView.vue'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -37,6 +41,28 @@ const routes = [
         component: HomeView,
         meta: {
           title: "Home"
+        }
+      },
+      {
+        path: '/about',
+        name: 'about',
+        component: AboutView,
+        meta: {
+          title: "About"
+        }
+      }
+    ]
+  },
+  {
+    path: '/',
+    component: AdminLayouts,
+    children: [
+      {
+        path: 'dashboard',
+        name: 'dashboard',
+        component: DashboardView,
+        meta: {
+          title: "Dashboard"
         }
       },
       {
